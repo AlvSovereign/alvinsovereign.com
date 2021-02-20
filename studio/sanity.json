@@ -1,0 +1,51 @@
+{
+  "root": true,
+  "api": {
+    "projectId": "m1k5qb2c",
+    "dataset": "production"
+  },
+  "project": {
+    "name": "Alvin Sovereign Website"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool"
+  ],
+  "env": {
+    "development": {
+      "plugins": ["@sanity/vision"]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    },
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./deskStructure.ts"
+    }
+  ],
+  "__experimental_spaces": [
+    {
+      "name": "development",
+      "title": "Dev",
+      "default": true,
+      "api": {
+        "projectId": "m1k5qb2c",
+        "dataset": "development"
+      }
+    },
+    {
+      "name": "production",
+      "title": "Prod",
+      "api": {
+        "projectId": "m1k5qb2c",
+        "dataset": "production"
+      }
+    }
+  ]
+}
