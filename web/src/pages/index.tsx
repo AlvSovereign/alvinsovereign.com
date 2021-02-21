@@ -1,57 +1,62 @@
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import { FC } from 'react';
+import Image from 'next/image';
+import { Text } from '../components';
 
-export default function Home() {
+type IndexProps = {};
+
+const Index: FC<IndexProps> = ({}) => {
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href='https://nextjs.org'>Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href='https://nextjs.org/docs' className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href='https://nextjs.org/learn' className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href='https://github.com/vercel/next.js/tree/master/examples'
-            className={styles.card}>
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href='https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-            className={styles.card}>
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+    <>
+      <section className='h-96 flex flex-col-reverse md:flex-row max-w-4xl mx-auto'>
+        <div className='flex-1 h-full relative hidden md:block lg:block xl:block 2xl:block'>
+          <Image
+            alt='Headshot of Alvin Sovereign.'
+            layout='fill'
+            objectFit='contain'
+            src='/images/headshot.jpg'
+          />
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'>
-          Powered by{' '}
-          <img src='/vercel.svg' alt='Vercel Logo' className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+        <div className='flex flex-1 flex-col justify-between'>
+          <Text color='secondary' component='h1' variant='h2'>
+            {`Hi, I'm `}
+            <Text
+              className='inline bg-slate-blue-light'
+              color='accent'
+              component='span'>
+              {`Alvin Sovereign`}
+            </Text>
+            <Text className='inline' color='secondary' component='span'>
+              {` a London-based `}
+            </Text>
+            <Text
+              className='inline bg-slate-blue-light'
+              color='accent'
+              component='span'>
+              {`Senior Front End Developer`}
+            </Text>
+            <Text className='inline' color='secondary' component='p'>
+              {` with over 6 years experience in breaking, making and testing user
+            interfaces.`}
+            </Text>
+          </Text>
+          <Text className='inline' component='p' variant='body'>
+            {`I'm currently unavailable as I'm doing some awesome UI stuff with `}
+            <Text
+              className='inline bg-slate-blue-light'
+              color='accent'
+              component='p'
+              variant='body'>
+              Wunderman Thompson.
+            </Text>
+          </Text>
+          <div className='flex flex-row w-full'>
+            <Text className='uppercase mr-4'>Instagram</Text>
+            <Text className='uppercase'>Contact</Text>
+          </div>
+        </div>
+      </section>
+    </>
   );
-}
+};
+
+export default Index;

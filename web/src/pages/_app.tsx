@@ -1,7 +1,7 @@
 import React from 'react';
-import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
+import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
-import { Head } from '../components';
+import { Head, Page } from '../components';
 import '../styles/globals.css';
 
 const queryClient = new QueryClient();
@@ -10,7 +10,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <QueryClientProvider client={queryClient}>
       <Head />
-      <Component {...pageProps} />
+      <Page>
+        <Component {...pageProps} />
+      </Page>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
