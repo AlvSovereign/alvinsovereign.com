@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react';
 import clsx from 'clsx';
 
-export type TextVariant = 'body' | 'h1' | 'h2' | 'h3' | 'hero';
+export type TextVariant = 'body' | 'h1' | 'h2' | 'h3' | 'hero' | 'subheading';
 
 type TextProps = {
   children: ReactNode;
@@ -29,7 +29,8 @@ const Text: FC<TextProps> = ({
         variant === 'h1' && `text-3xl md:text-4xl`,
         variant === 'h2' && `text-2xl md:text-3xl`,
         variant === 'h3' && `text-xl md:text-2xl`,
-        variant === 'body' && `text-lg md:text-xl`,
+        variant === 'subheading' && `text-lg md:text-xl`,
+        variant === 'body' && `text-base md:text-lg`,
       ])}>
       {children}
     </Component>

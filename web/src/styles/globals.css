@@ -23,9 +23,3 @@
   font-style: normal;
   font-weight: 600;
 }
-
-:root {
-  --accent-color: rgba(48, 70, 109);
-  --heading-color: rgba(66, 66, 66, 1);
-  --text-color: rgba(66, 66, 66, 0.85);
-}
