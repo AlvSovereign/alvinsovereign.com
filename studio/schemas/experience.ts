@@ -1,6 +1,6 @@
 export default {
-  name: 'category',
-  title: 'Category',
+  name: 'experience',
+  title: 'Experience',
   type: 'document',
   fields: [
     {
@@ -9,9 +9,19 @@ export default {
       type: 'string',
     },
     {
+      name: 'role',
+      title: 'Role',
+      type: 'string',
+    },
+    {
       name: 'description',
       title: 'Description',
       type: 'text',
+    },
+    {
+      name: 'url',
+      title: 'URL',
+      type: 'url',
     },
   ],
 };

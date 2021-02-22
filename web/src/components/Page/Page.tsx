@@ -1,6 +1,7 @@
 import { FC, ReactNode } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { At, InstagramLogo, LinkedinLogo } from 'phosphor-react';
 import { Text } from '..';
 
 type PageProps = { children: ReactNode };
@@ -74,10 +75,24 @@ const Page: FC<PageProps> = ({ children }) => {
                 Wunderman Thompson.
               </Text>
             </Text>
-            <div className='flex flex-row item-center justify-between'>
-              <Text>INSTAGRAM</Text>
-              <Text>LINKEDIN</Text>
-              <Text>CONTACT</Text>
+            <div className='flex flex-row item-center justify-end'>
+              <a
+                className='mr-4'
+                href='https://www.instagram.com/alvinsovereign.dev/'
+                target='_blank'>
+                <InstagramLogo size={36} color='#30466D' weight='fill' />
+              </a>
+              <a
+                className='mr-4'
+                href=' www.linkedin.com/in/alvinsovereign'
+                target='_blank'>
+                <LinkedinLogo size={36} color='#30466D' weight='fill' />
+              </a>
+              <a
+                href='mailto:web@alvinsovereign.com?subject=From%20alvinsovereign.com'
+                target='_top'>
+                <At size={36} color='#30466D' weight='fill' />
+              </a>
             </div>
           </div>
         </footer>
