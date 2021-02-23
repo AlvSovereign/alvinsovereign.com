@@ -16,12 +16,23 @@ export default {
     {
       name: 'description',
       title: 'Description',
-      type: 'text',
+      type: 'array',
+      of: [
+        {
+          type: 'block',
+        },
+      ],
     },
     {
       name: 'url',
       title: 'URL',
       type: 'url',
+    },
+    {
+      name: 'technologies',
+      title: 'Technologies',
+      type: 'array',
+      of: [{ type: 'reference', to: [{ type: 'technology' }] }],
     },
   ],
 };

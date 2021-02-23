@@ -6,6 +6,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 import experience from './experience';
 import pages from './pages';
 import siteSettings from './siteSettings';
+import technology from './technology';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -18,5 +19,6 @@ export default createSchema({
     experience,
     pages,
     siteSettings,
+    technology,
   ]),
 });
