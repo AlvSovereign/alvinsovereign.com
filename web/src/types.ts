@@ -1,7 +1,9 @@
 export type Experience = {
+  _id: string;
+  date: string;
   description: any;
   role: string;
-  technologies: Technologies;
+  technologies: Technologies[];
   title: string;
   url: string;
 };
@@ -18,5 +20,6 @@ export type Slug = {
 };
 
 export type Technologies = {
+  _id: string;
   title: string;
 };

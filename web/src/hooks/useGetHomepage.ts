@@ -6,6 +6,8 @@ const query = gql`
     allPages(where: { slug: { current: { matches: "/" } } }) {
       _id
       experience {
+        _id
+        date
         description: descriptionRaw
         role
         technologies {

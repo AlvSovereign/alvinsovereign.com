@@ -9,7 +9,9 @@ function MyApp({ Component, pageProps }) {
   const queryClientRef = React.useRef<any>();
 
   if (!queryClientRef.current) {
-    queryClientRef.current = new QueryClient();
+    queryClientRef.current = new QueryClient({
+      defaultOptions: { queries: { refetchOnWindowFocus: false } },
+    });
   }
   return (
     <QueryClientProvider client={queryClientRef.current}>
