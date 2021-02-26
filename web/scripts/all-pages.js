@@ -19,7 +19,7 @@ const query = gql`
 `;
 
 async function getAllPages() {
-  const data = await request(process.env.SANITY_URL, query);
+  const data = await request(process.env.NEXT_PUBLIC_SANITY_URL, query);
 
   fs.writeFile('./src/data/allPages.json', JSON.stringify(data), (err) => {
     if (err) throw err;
