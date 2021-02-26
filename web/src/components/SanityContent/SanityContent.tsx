@@ -17,7 +17,12 @@ const SanityContent: FC<SanityContentProps> = ({
     marks: {
       link: ({ children, mark }) => {
         return (
-          <Text component='a' href={mark.href} target='_blank'>
+          <Text
+            color='accent'
+            component='a'
+            href={mark.href}
+            target='_blank'
+            variant='link'>
             {children}
           </Text>
         );

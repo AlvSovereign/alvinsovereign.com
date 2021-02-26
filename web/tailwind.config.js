@@ -1,6 +1,5 @@
 module.exports = {
-  purge: ['./src/pages/**/*.{ts,tsx}', './src/components/**/*.{ts,tsx}'],
-  darkMode: 'class', // or 'media' or 'class'
+  darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
@@ -13,6 +12,10 @@ module.exports = {
           light: '#E8EDF5',
           normal: '#30466D',
         },
+        'slate-yellow': {
+          light: '#F3E5A5',
+          normal: '#A4913E',
+        },
         zIndex: {
           '-10': '-10',
         },
@@ -22,8 +25,4 @@ module.exports = {
       sans: ['Geomanist', 'sans-serif'],
     },
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
 };

@@ -25,17 +25,11 @@ const query = gql`
 
 export const fetcher = () =>
   request(process.env.NEXT_PUBLIC_SANITY_URL, query).then((data) => {
-    console.log('data: ', data);
-
     return data.allPages[0];
   });
 
 const useGetHomepage = () => {
-  return useQuery('homepage', fetcher, {
-    onSuccess: (data) => {
-      console.log('data: ', data);
-    },
-  });
+  return useQuery('homepage', fetcher);
 };
 
 export default useGetHomepage;

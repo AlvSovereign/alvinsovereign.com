@@ -2,6 +2,7 @@ import React from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Hydrate } from 'react-query/hydration';
 import { ReactQueryDevtools } from 'react-query/devtools';
+import { GlobalStyles } from 'twin.macro';
 import { Head, Page } from '../components';
 import '../styles/globals.css';
 
@@ -15,6 +16,7 @@ function MyApp({ Component, pageProps }) {
   }
   return (
     <QueryClientProvider client={queryClientRef.current}>
+      <GlobalStyles />
       <Head />
       <Page>
         <Hydrate state={pageProps.dehydratedState}>

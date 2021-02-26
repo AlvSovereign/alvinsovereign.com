@@ -1,5 +1,5 @@
 import { FC, ReactNode } from 'react';
-import clsx from 'clsx';
+import tw from 'twin.macro';
 
 export type TextVariant =
   | 'body'
@@ -8,17 +8,18 @@ export type TextVariant =
   | 'h2'
   | 'h3'
   | 'hero'
+  | 'link'
   | 'subheading';
 
 type TextProps = {
   children: ReactNode;
-  className?: string;
   color?: 'accent' | 'primary' | 'secondary';
   component?: string;
   href?: string;
   style?: 'italic';
   target?: string;
   variant?: TextVariant;
+  className?: string;
 };
 
 const Text: FC<TextProps> = ({
@@ -33,22 +34,22 @@ const Text: FC<TextProps> = ({
 }) => {
   return (
     <Component
-      className={clsx([
-        className,
-        color === 'accent' && 'text-slate-blue-normal dark:slate-blue-light',
-        color === 'primary' && 'text-grey-normal dark:text-white',
-        color === 'secondary' && 'text-grey-light dark:text-grey-light',
-        Component === 'a' &&
-          'text-slate-blue-normal dark:slate-blue-light underline',
-        style === 'italic' && 'italic',
-        variant === 'hero' && `leading-10 text-6xl md:text-7xl`,
-        variant === 'h1' && `text-3xl md:text-4xl font-medium`,
-        variant === 'h2' && `text-2xl md:text-3xl font-medium`,
-        variant === 'h3' && `text-xl md:text-2xl font-medium`,
-        variant === 'subheading' && `text-base md:text-lg`,
-        variant === 'body' && `text-sm md:text-base`,
-        variant === 'body2' && `text-xs md:text-sm`,
-      ])}
+      className={className}
+      css={[
+        color === 'accent' &&
+          tw`text-slate-blue-normal dark:text-slate-yellow-normal`,
+        color === 'primary' && tw`text-grey-normal dark:text-grey-lighter`,
+        color === 'secondary' && tw`text-grey-light dark:text-grey-light`,
+        style === 'italic' && tw`italic`,
+        variant === 'hero' && tw`leading-10 text-6xl md:text-7xl`,
+        variant === 'h1' && tw`text-3xl md:text-4xl font-medium`,
+        variant === 'h2' && tw`text-2xl md:text-3xl font-medium`,
+        variant === 'h3' && tw`text-xl md:text-2xl font-medium`,
+        variant === 'link' && tw`text-slate-blue-normal underline`,
+        variant === 'subheading' && tw`text-base md:text-lg`,
+        variant === 'body' && tw`text-sm md:text-base`,
+        variant === 'body2' && tw`text-xs md:text-sm`,
+      ]}
       href={href}
       target={target}>
       {children}
