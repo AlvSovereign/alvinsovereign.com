@@ -6,7 +6,7 @@ import { WorkExperience } from '../components';
 
 const Index: FC = () => {
   const { data } = useGetHomepage();
-  const { _id = null, experience = null, slug = null } = data;
+  const { experience = null } = data;
 
   return <WorkExperience experience={experience} />;
 };

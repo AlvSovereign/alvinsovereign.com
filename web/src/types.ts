@@ -2,10 +2,18 @@ export type Experience = {
   _id: string;
   date: string;
   description: any;
+  project: string;
+  projectUrl: string;
   role: string;
   technologies: Technologies[];
   title: string;
   url: string;
+};
+
+export type AllPages = {
+  _id: string;
+  slug: Slug;
+  title: string;
 };
 
 export type Pages = {

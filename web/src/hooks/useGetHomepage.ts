@@ -2,19 +2,21 @@ import { useQuery } from 'react-query';
 import { gql, request } from 'graphql-request';
 
 const query = gql`
-  {
+  query Homepage {
     allPages(where: { slug: { current: { matches: "/" } } }) {
       _id
       experience {
         _id
         date
         description: descriptionRaw
+        project
+        projectUrl
         role
         technologies {
+          _id
           title
         }
         title
-        url
       }
       slug {
         current

@@ -14,6 +14,16 @@ export default {
       type: 'string',
     },
     {
+      name: 'project',
+      title: 'Project',
+      type: 'string',
+    },
+    {
+      name: 'projectUrl',
+      title: 'Project url',
+      type: 'url',
+    },
+    {
       name: 'date',
       title: 'Date',
       type: 'string',
@@ -27,11 +37,6 @@ export default {
           type: 'block',
         },
       ],
-    },
-    {
-      name: 'url',
-      title: 'URL',
-      type: 'url',
     },
     {
       name: 'technologies',
