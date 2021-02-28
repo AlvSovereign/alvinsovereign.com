@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
         </Hydrate>
       </Page>
-      <ReactQueryDevtools initialIsOpen={false} />
+      {/* <ReactQueryDevtools initialIsOpen={false} /> */}
     </QueryClientProvider>
   );
 }

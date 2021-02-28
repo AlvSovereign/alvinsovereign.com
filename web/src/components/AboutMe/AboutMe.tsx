@@ -55,7 +55,8 @@ const AboutMe: FC<AboutMeProps> = ({}) => {
       </Text>
       <div tw='flex flex-row items-center justify-end'>
         <a
-          tw='mr-4'
+          aria-label='Visit my Instagram profile page.'
+          tw='mx-2'
           href='https://www.instagram.com/alvinsovereign.dev/'
           target='_blank'>
           <InstagramLogo
@@ -64,7 +65,11 @@ const AboutMe: FC<AboutMeProps> = ({}) => {
             weight='fill'
           />
         </a>
-        <a tw='mr-4' href='www.linkedin.com/in/alvinsovereign' target='_blank'>
+        <a
+          aria-label='Visit my LinkedIn profile page.'
+          tw='mx-2'
+          href='www.linkedin.com/in/alvinsovereign'
+          target='_blank'>
           <LinkedinLogo
             size={36}
             tw='text-slate-blue-normal dark:text-slate-yellow-normal'
@@ -72,6 +77,8 @@ const AboutMe: FC<AboutMeProps> = ({}) => {
           />
         </a>
         <a
+          tw='mx-2'
+          aria-label='Send an email to my inbox.'
           href='mailto:web@alvinsovereign.com?subject=From%20alvinsovereign.com'
           target='_top'>
           <At

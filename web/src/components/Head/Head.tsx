@@ -4,7 +4,9 @@ import NextHead from 'next/head';
 const Head: FC = () => {
   return (
     <NextHead>
-      <title>Alvin Sovereign | Web Developer</title>
+      <title>
+        Alvin Sovereign | Maker, Breaker and Tester of all things UI
+      </title>
       <link rel='icon' href='/favicon.ico' />
       <meta
         name='description'

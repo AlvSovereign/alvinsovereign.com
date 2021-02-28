@@ -8,7 +8,7 @@ type WorkExperienceProps = { experience: Experience[] };
 
 const WorkExperience: FC<WorkExperienceProps> = ({ experience }) => {
   return (
-    <ul tw='flex flex-col list-outside list-disc border-l-2 border-grey-normal dark:border-grey-lighter mt-4 mb-8 pl-2.5'>
+    <ul tw='flex flex-col list-outside list-disc'>
       {(experience || []).map(
         (
           {
@@ -27,12 +27,13 @@ const WorkExperience: FC<WorkExperienceProps> = ({ experience }) => {
           <li
             key={_id}
             css={[
-              tw`relative flex flex-row -mt-2.5`,
-              index + 1 === array.length ? tw`mb-0` : tw`mb-12`,
+              tw`relative flex flex-row border-l-2 border-grey-normal dark:border-grey-lighter`,
+              index + 1 === array.length ? tw`mb-12 pb-0` : tw`mb-0 pb-8`,
+              index === 0 ? tw`border-dashed` : tw`border-solid`,
             ]}>
             <Circle
               size={14}
-              css={{ left: -18, top: 1 }}
+              css={{ left: -8, top: -1 }}
               tw='absolute text-slate-blue-normal dark:text-slate-yellow-normal'
               weight='fill'
             />
@@ -44,7 +45,10 @@ const WorkExperience: FC<WorkExperienceProps> = ({ experience }) => {
                 {title}
               </Text>
               {project && projectUrl ? (
-                <a href={projectUrl} target='_blank'>
+                <a
+                  aria-label={`Visit the "${project}" project webpage`}
+                  href={projectUrl}
+                  target='_blank'>
                   <Text color='accent' tw='underline mb-2' variant='body'>
                     {`Project: ${project}`}
                   </Text>
