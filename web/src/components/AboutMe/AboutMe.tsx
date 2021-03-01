@@ -15,8 +15,9 @@ const AboutMe: FC<AboutMeProps> = ({}) => {
           height={400}
           width={320}
           layout='intrinsic'
-          objectFit='contain'
+          objectFit='cover'
           src='/images/headshot.jpg'
+          priority
         />
       </div>
       <Text

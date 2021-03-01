@@ -25,6 +25,7 @@ const Navigation: FC = () => {
             alt='Website logo.'
             width={150}
             height={40}
+            priority
           />
         </a>
       </Link>
