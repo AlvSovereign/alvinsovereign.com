@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { QueryClient } from 'react-query';
 import { dehydrate } from 'react-query/hydration';
-import { homepageFetcher, useGetHomepage } from '../hooks';
+import { homepageFetcher, useGetHomepage } from '@/hooks';
 import { WorkExperience } from '../components';
 
 const Index: FC = () => {

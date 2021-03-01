@@ -28,24 +28,5 @@
       "name": "part:@sanity/desk-tool/structure",
       "path": "./deskStructure.ts"
     }
-  ],
-  "__experimental_spaces": [
-    {
-      "name": "development",
-      "title": "Dev",
-      "default": true,
-      "api": {
-        "projectId": "m1k5qb2c",
-        "dataset": "development"
-      }
-    },
-    {
-      "name": "production",
-      "title": "Prod",
-      "api": {
-        "projectId": "m1k5qb2c",
-        "dataset": "production"
-      }
-    }
   ]
 }

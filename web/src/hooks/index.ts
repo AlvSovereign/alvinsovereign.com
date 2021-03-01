@@ -1,3 +1,4 @@
 import useGetHomepage, { fetcher as homepageFetcher } from './useGetHomepage';
+import useGetSeo, { fetcher as seoFetcher } from './useGetSeo';
 
-export { homepageFetcher, useGetHomepage };
+export { homepageFetcher, seoFetcher, useGetHomepage, useGetSeo };

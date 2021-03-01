@@ -5,6 +5,7 @@ import createSchema from 'part:@sanity/base/schema-creator';
 import schemaTypes from 'all:part:@sanity/base/schema-type';
 import experience from './experience';
 import pages from './pages';
+import seo from './seo';
 import siteSettings from './siteSettings';
 import technology from './technology';
 
@@ -18,6 +19,7 @@ export default createSchema({
     /* Your types here! */
     experience,
     pages,
+    seo,
     siteSettings,
     technology,
   ]),
