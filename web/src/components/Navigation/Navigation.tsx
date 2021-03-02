@@ -30,7 +30,7 @@ const Navigation: FC = () => {
         </a>
       </Link>
       <div className='flex flex-1 items-center'>
-        {(pagesData.allPages || []).map(({ _id, slug, title }: AllPages) => (
+        {/* {(pagesData.allPages || []).map(({ _id, slug, title }: AllPages) => (
           <Link href={slug.current} key={_id}>
             <a css={pathname === slug.current && tw`pointer-events-none`}>
               <Text
@@ -41,7 +41,7 @@ const Navigation: FC = () => {
               </Text>
             </a>
           </Link>
-        ))}
+        ))} */}
       </div>
     </nav>
   );
