@@ -17,6 +17,7 @@ type TextProps = {
   component?: string;
   href?: string;
   style?: 'italic';
+  rel?: 'noreferrer' | 'noopener';
   target?: string;
   variant?: TextVariant;
   className?: string;
@@ -28,6 +29,7 @@ const Text: FC<TextProps> = ({
   color = 'primary',
   component: Component = 'p' as any,
   href,
+  rel,
   style,
   target,
   variant,
@@ -51,6 +53,7 @@ const Text: FC<TextProps> = ({
         variant === 'body2' && tw`text-xs md:text-sm`,
       ]}
       href={href}
+      rel={rel}
       target={target}>
       {children}
     </Component>

@@ -22,6 +22,7 @@ const SanityContent: FC<SanityContentProps> = ({
             component='a'
             href={mark.href}
             target='_blank'
+            rel='noreferrer'
             variant='link'>
             {children}
           </Text>

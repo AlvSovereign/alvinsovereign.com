@@ -18,6 +18,27 @@ class MyDocument extends Document<any> {
       <Html lang='EN'>
         <Head>
           <link rel='icon' href='/favicon.ico' />
+          <link
+            rel='preload'
+            href='/fonts/Geomanist-Light.woff2'
+            as='font'
+            type='font/woff2'
+            crossOrigin='anonymous'
+          />
+          <link
+            rel='preload'
+            href='/fonts/Geomanist-Regular.woff2'
+            as='font'
+            type='font/woff2'
+            crossOrigin='anonymous'
+          />
+          <link
+            rel='preload'
+            href='/fonts/Geomanist-Medium.woff2'
+            as='font'
+            type='font/woff2'
+            crossOrigin='anonymous'
+          />
           <meta name='description' content={seoData.description} />
 
           <meta property='og:url' content={seoData.url} />

@@ -48,7 +48,8 @@ const WorkExperience: FC<WorkExperienceProps> = ({ experience }) => {
                 <a
                   aria-label={`Visit the "${project}" project webpage`}
                   href={projectUrl}
-                  target='_blank'>
+                  target='_blank'
+                  rel='noreferrer'>
                   <Text color='accent' tw='underline mb-2' variant='body'>
                     {`Project: ${project}`}
                   </Text>

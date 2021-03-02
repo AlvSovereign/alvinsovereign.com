@@ -59,7 +59,8 @@ const AboutMe: FC<AboutMeProps> = ({}) => {
           aria-label='Visit my Instagram profile page.'
           tw='mx-2'
           href='https://www.instagram.com/alvinsovereign.dev/'
-          target='_blank'>
+          target='_blank'
+          rel='noreferrer'>
           <InstagramLogo
             size={36}
             tw='text-slate-blue-normal dark:text-slate-yellow-normal'
@@ -70,7 +71,8 @@ const AboutMe: FC<AboutMeProps> = ({}) => {
           aria-label='Visit my LinkedIn profile page.'
           tw='mx-2'
           href='www.linkedin.com/in/alvinsovereign'
-          target='_blank'>
+          target='_blank'
+          rel='noreferrer'>
           <LinkedinLogo
             size={36}
             tw='text-slate-blue-normal dark:text-slate-yellow-normal'
@@ -81,7 +83,8 @@ const AboutMe: FC<AboutMeProps> = ({}) => {
           tw='mx-2'
           aria-label='Send an email to my inbox.'
           href='mailto:web@alvinsovereign.com?subject=From%20alvinsovereign.com'
-          target='_top'>
+          target='_top'
+          rel='noreferrer'>
           <At
             size={36}
             tw='text-slate-blue-normal dark:text-slate-yellow-normal'
