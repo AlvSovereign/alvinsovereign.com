@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "yarn get-pages && next dev",
-    "build": "next build",
+    "build": "yarn get-pages && next build",
     "start": "next start",
     "get-pages": "node ./scripts/all-pages.js"
   },
