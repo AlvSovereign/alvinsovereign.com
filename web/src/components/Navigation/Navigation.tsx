@@ -23,6 +23,8 @@ const Navigation: FC = () => {
                 : '/images/as_logo_black.svg'
             }
             alt='Website logo.'
+            layout='intrinsic'
+            objectFit='contain'
             width={150}
             height={40}
             priority

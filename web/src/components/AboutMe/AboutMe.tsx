@@ -11,7 +11,7 @@ const AboutMe: FC<AboutMeProps> = ({}) => {
     <>
       <div tw='relative hidden md:block mb-8'>
         <Image
-          alt='Website logo.'
+          alt='Headshot of Alvin Sovereign.'
           height={400}
           width={320}
           layout='intrinsic'
