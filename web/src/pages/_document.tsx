@@ -39,7 +39,6 @@ class MyDocument extends Document<any> {
             type='font/woff2'
             crossOrigin='anonymous'
           />
-          <meta name='viewport' content='width=device-width, initial-scale=1' />
           <meta name='description' content={seoData.description} />
 
           <meta property='og:url' content={seoData.url} />

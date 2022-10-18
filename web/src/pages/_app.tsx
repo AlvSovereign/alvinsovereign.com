@@ -18,6 +18,7 @@ function MyApp({ Component, pageProps }) {
     <QueryClientProvider client={queryClientRef.current}>
       <GlobalStyles />
       <Head>
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>
           Alvin Sovereign | Maker, Breaker and Tester of all things UI
         </title>
