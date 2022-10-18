@@ -55,10 +55,6 @@ class MyDocument extends Document<any> {
           <meta name='twitter:description' content={seoData.description} />
           <meta name='twitter:image' content={seoData.image.asset.url} />
 
-          <title>
-            Alvin Sovereign | Maker, Breaker and Tester of all things UI
-          </title>
-
           <style
             data-emotion-css={this.props.ids.join(' ')}
             dangerouslySetInnerHTML={{ __html: this.props.css }}

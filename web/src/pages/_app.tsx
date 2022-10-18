@@ -17,7 +17,11 @@ function MyApp({ Component, pageProps }) {
   return (
     <QueryClientProvider client={queryClientRef.current}>
       <GlobalStyles />
-      <Head />
+      <Head>
+        <title>
+          Alvin Sovereign | Maker, Breaker and Tester of all things UI
+        </title>
+      </Head>
       <Page>
         <Hydrate state={pageProps.dehydratedState}>
           <Component {...pageProps} />
