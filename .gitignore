@@ -26,5 +26,9 @@
 */.env.test.local
 */.env.production.local
 
-.yarn
-dist
+*/.yarn
+*/dist
+*/.next
+*/.vercel
+
+/.vscode/
