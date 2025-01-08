@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Geomanist;
+  src: url('/fonts/Geomanist-Light.woff2') format(woff2);
+  font-display: optional;
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: Geomanist;
+  src: url('/fonts/Geomanist-Regular.woff2') format(woff2);
+  font-display: optional;
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: Geomanist;
+  src: url('/fonts/Geomanist-Medium.woff2') format(woff2);
+  font-display: optional;
+  font-style: normal;
+  font-weight: 600;
+}

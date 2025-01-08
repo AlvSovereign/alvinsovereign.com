@@ -9,6 +9,7 @@
   "scripts": {
     "start": "sanity start",
     "build": "sanity build",
+    "dev": "sanity dev",
     "deploy:dev": "sanity graphql deploy --dataset development",
     "deploy:prod": "sanity graphql deploy --dataset production"
   },
@@ -16,17 +17,12 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/base": "^2.34.0",
     "@sanity/components": "^2.14.0",
-    "@sanity/core": "^2.34.0",
-    "@sanity/default-layout": "^2.34.0",
-    "@sanity/default-login": "^2.34.0",
-    "@sanity/desk-tool": "^2.34.1",
-    "@sanity/vision": "^2.34.0",
+    "@sanity/vision": "latest",
     "prop-types": "^15.7",
-    "react": "^17.0",
-    "react-dom": "^17.0",
-    "styled-components": "^5.2.0"
-  },
-  "devDependencies": {}
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sanity": "latest",
+    "styled-components": "6.0.0"
+  }
 }
