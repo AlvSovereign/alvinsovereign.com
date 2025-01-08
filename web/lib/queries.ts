@@ -41,11 +41,13 @@ export const allSeoQuery = gql`
 `;
 
 export const fetchAllSeo = () =>
-  request(process.env.NEXT_PUBLIC_SANITY_URL, allSeoQuery).then((data) => {
+  request(process.env.NEXT_PUBLIC_SANITY_URL!, allSeoQuery).then((data) => {
     return data.allSeo[0];
   });
 
 export const fetchHomepage = () =>
-  request(process.env.NEXT_PUBLIC_SANITY_URL, getHomepageQuery).then((data) => {
-    return data.allPages[0];
-  });
+  request(process.env.NEXT_PUBLIC_SANITY_URL!, getHomepageQuery).then(
+    (data) => {
+      return data.allPages[0];
+    }
+  );

@@ -1,5 +1,4 @@
 import { FC, ReactNode } from 'react';
-import tw from 'twin.macro';
 
 export type TextVariant =
   | 'body'
@@ -36,22 +35,22 @@ const Text: FC<TextProps> = ({
 }) => {
   return (
     <Component
-      className={className}
-      css={[
+      className={[
         color === 'accent' &&
-          tw`text-slate-blue-normal dark:text-slate-yellow-normal`,
-        color === 'primary' && tw`text-grey-normal dark:text-grey-lighter`,
-        color === 'secondary' && tw`text-grey-light dark:text-grey-light`,
-        style === 'italic' && tw`italic`,
-        variant === 'hero' && tw`leading-10 text-6xl md:text-7xl`,
-        variant === 'h1' && tw`text-3xl md:text-4xl font-medium`,
-        variant === 'h2' && tw`text-2xl md:text-3xl font-medium`,
-        variant === 'h3' && tw`text-xl md:text-2xl font-medium`,
-        variant === 'link' && tw`text-slate-blue-normal underline`,
-        variant === 'subheading' && tw`text-base md:text-lg`,
-        variant === 'body' && tw`text-sm md:text-base`,
-        variant === 'body2' && tw`text-xs md:text-sm`,
-      ]}
+          `text-slate-blue-normal dark:text-slate-yellow-normal`,
+        color === 'primary' && `text-grey-normal dark:text-grey-lighter`,
+        color === 'secondary' && `text-grey-light dark:text-grey-light`,
+        style === 'italic' && `italic`,
+        variant === 'hero' && `leading-10 text-6xl md:text-7xl`,
+        variant === 'h1' && `text-3xl md:text-4xl font-medium`,
+        variant === 'h2' && `text-2xl md:text-3xl font-medium`,
+        variant === 'h3' && `text-xl md:text-2xl font-medium`,
+        variant === 'link' && `text-slate-blue-normal underline`,
+        variant === 'subheading' && `text-base md:text-lg`,
+        variant === 'body' && `text-sm md:text-base`,
+        variant === 'body2' && `text-xs md:text-sm`,
+        className,
+      ].join(' ')}
       href={href}
       rel={rel}
       target={target}>

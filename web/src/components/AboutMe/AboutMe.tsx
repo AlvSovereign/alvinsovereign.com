@@ -1,15 +1,13 @@
 import { FC } from 'react';
 import Image from 'next/image';
-import { At, InstagramLogo, LinkedinLogo } from 'phosphor-react';
-import tw from 'twin.macro';
-import { Text } from '..';
+import { At, LinkedinLogo } from '@phosphor-icons/react/dist/ssr';
 
 type AboutMeProps = {};
 
 const AboutMe: FC<AboutMeProps> = ({}) => {
   return (
     <>
-      <div tw='relative hidden md:block mb-8'>
+      <div className='relative hidden md:block mb-8'>
         <Image
           alt='Headshot of Alvin Sovereign.'
           height={400}
@@ -20,74 +18,53 @@ const AboutMe: FC<AboutMeProps> = ({}) => {
           priority
         />
       </div>
-      <Text
-        tw='mb-6 md:mb-8 text-center md:text-left'
-        color='primary'
-        component='p'
-        variant='body'>
+      <p className='mb-6 md:mb-8 text-center md:text-left text-grey-normal dark:text-grey-lighter'>
         {`Hi, I'm `}
-        <Text tw='inline' color='accent' component='h1'>
-          {`Alvin Sovereign`}
-        </Text>
-        <Text tw='inline' color='primary' component='h1'>
+        <span className='text-slate-blue-normal dark:text-slate-yellow-normal'>
+          Alvin Sovereign
+        </span>
+        <span className='text-grey-normal dark:text-grey-lighter'>
           {` a London-based `}
-        </Text>
-        <Text tw='inline' color='accent' component='h1'>
+        </span>
+        <span className='text-slate-blue-normal dark:text-slate-yellow-normal'>
           {`Senior Front End Developer`}
-        </Text>
-        <Text tw='inline' color='primary' component='h1'>
-          {` with over 6 years experience in breaking, making and testing user
+        </span>
+        <span className='text-grey-normal dark:text-grey-lighter'>
+          {` with over 9 years experience in breaking, making and testing user
             interfaces.`}
-        </Text>
-      </Text>
-      <Text
-        tw='text-center md:text-left leading-5 mb-6'
-        color='primary'
-        component='p'
-        variant='body2'>
-        {`I'm currently unavailable as I'm doing some awesome UI stuff with `}
-        <Text
-          tw='inline text-center'
-          color='accent'
-          component='p'
-          variant='body2'>
-          Wunderman Thompson.
-        </Text>
-      </Text>
-      <div tw='flex flex-row items-center justify-end'>
-        <a
-          aria-label='Visit my Instagram profile page.'
-          tw='mx-2'
-          href='https://www.instagram.com/alvinsovereign.dev/'
-          target='_blank'
-          rel='noreferrer'>
-          <InstagramLogo
-            size={36}
-            tw='text-slate-blue-normal dark:text-slate-yellow-normal'
-            weight='fill'
-          />
-        </a>
+        </span>
+      </p>
+      <p className='text-center md:text-left leading-5 mb-6 text-grey-normal dark:text-grey-lighter'>
+        {`I'm currently`}
+        <span className='text-slate-blue-normal dark:text-slate-yellow-normal'>
+          {` available`}
+        </span>
+        <span className='text-grey-normal dark:text-grey-lighter'>
+          {` for new projects. Please get in touch.`}
+        </span>
+      </p>
+      <div className='flex flex-row items-center justify-center'>
         <a
           aria-label='Visit my LinkedIn profile page.'
-          tw='mx-2'
+          className='mx-2'
           href='www.linkedin.com/in/alvinsovereign'
           target='_blank'
           rel='noreferrer'>
           <LinkedinLogo
             size={36}
-            tw='text-slate-blue-normal dark:text-slate-yellow-normal'
+            className='text-slate-blue-normal dark:text-slate-yellow-normal'
             weight='fill'
           />
         </a>
         <a
-          tw='mx-2'
+          className='mx-2'
           aria-label='Send an email to my inbox.'
           href='mailto:web@alvinsovereign.com?subject=From%20alvinsovereign.com'
           target='_top'
           rel='noreferrer'>
           <At
             size={36}
-            tw='text-slate-blue-normal dark:text-slate-yellow-normal'
+            className='text-slate-blue-normal dark:text-slate-yellow-normal'
             weight='fill'
           />
         </a>

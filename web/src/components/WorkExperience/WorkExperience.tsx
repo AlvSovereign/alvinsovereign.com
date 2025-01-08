@@ -1,6 +1,5 @@
 import { FC } from 'react';
-import tw from 'twin.macro';
-import { Circle } from 'phosphor-react';
+import { Circle } from '@phosphor-icons/react/dist/ssr';
 import { SanityContent, Text } from '../../components';
 import { Experience } from '../../types';
 
@@ -8,7 +7,7 @@ type WorkExperienceProps = { experience: Experience[] };
 
 const WorkExperience: FC<WorkExperienceProps> = ({ experience }) => {
   return (
-    <ul tw='flex flex-col list-outside list-disc'>
+    <ul className='flex flex-col list-outside list-disc'>
       {(experience || []).map(
         (
           {
@@ -26,18 +25,17 @@ const WorkExperience: FC<WorkExperienceProps> = ({ experience }) => {
         ) => (
           <li
             key={_id}
-            css={[
-              tw`relative flex flex-row border-l-2 border-grey-normal dark:border-grey-lighter`,
-              index + 1 === array.length ? tw`mb-12 pb-0` : tw`mb-0 pb-8`,
-              index === 0 ? tw`border-dashed` : tw`border-solid`,
-            ]}>
+            className={[
+              index + 1 === array.length ? 'mb-12 pb-0' : 'mb-0 pb-8',
+              index === 0 ? 'border-dashed' : 'border-solid',
+              'relative flex flex-row border-l-2 border-grey-normal dark:border-grey-lighter',
+            ].join(' ')}>
             <Circle
               size={14}
-              css={{ left: -8, top: -1 }}
-              tw='absolute text-slate-blue-normal dark:text-slate-yellow-normal'
+              className='absolute text-slate-blue-normal dark:text-slate-yellow-normal left-[-8px] top-[-1px]'
               weight='fill'
             />
-            <div tw='flex flex-col pl-3.5'>
+            <div className='flex flex-col pl-3.5'>
               <Text component='span' variant='body2'>
                 {date}
               </Text>
@@ -50,21 +48,31 @@ const WorkExperience: FC<WorkExperienceProps> = ({ experience }) => {
                   href={projectUrl}
                   target='_blank'
                   rel='noreferrer'>
-                  <Text color='accent' tw='underline mb-2' variant='body'>
+                  <Text
+                    color='accent'
+                    className='underline mb-2'
+                    variant='body'>
                     {`Project: ${project}`}
                   </Text>
                 </a>
               ) : (
                 project && (
-                  <Text color='accent' tw='mb-2' variant='body'>
+                  <Text color='accent' className='mb-2' variant='body'>
                     {`Project: ${project}`}
                   </Text>
                 )
               )}
-              <Text component='h4' tw='leading-5 mb-2' variant='subheading'>
+              <Text
+                component='h4'
+                className='leading-5 mb-2'
+                variant='subheading'>
                 {role}
               </Text>
-              <Text component='p' tw='mb-2' style='italic' variant='body2'>
+              <Text
+                component='p'
+                className='mb-2'
+                style='italic'
+                variant='body2'>
                 {`Technologies used: `}
                 {(technologies || []).map(({ _id, title }, index, array) => (
                   <Text
@@ -82,7 +90,7 @@ const WorkExperience: FC<WorkExperienceProps> = ({ experience }) => {
                   normal: (children) => {
                     return (
                       <Text
-                        tw='leading-5'
+                        className='leading-5'
                         color='primary'
                         component='p'
                         variant='body'>
