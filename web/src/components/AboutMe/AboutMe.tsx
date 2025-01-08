@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import { At, LinkedinLogo } from '@phosphor-icons/react/dist/ssr';
 
 type AboutMeProps = {};
@@ -27,11 +27,10 @@ const AboutMe: FC<AboutMeProps> = ({}) => {
           {` a London-based `}
         </span>
         <span className='text-slate-blue-normal dark:text-slate-yellow-normal'>
-          {`Senior Front End Developer`}
+          {`Senior Javascript Developer`}
         </span>
         <span className='text-grey-normal dark:text-grey-lighter'>
-          {` with over 9 years experience in breaking, making and testing user
-            interfaces.`}
+          {` with over 9 years professional experience.`}
         </span>
       </p>
       <p className='text-center md:text-left leading-5 mb-6 text-grey-normal dark:text-grey-lighter'>

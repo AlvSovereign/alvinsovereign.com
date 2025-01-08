@@ -1,9 +1,4 @@
 import { FC, ReactNode } from 'react';
-import {
-  At,
-  InstagramLogo,
-  LinkedinLogo,
-} from '@phosphor-icons/react/dist/ssr';
 import { AboutMe, Navigation } from '..';
 
 type PageProps = { children: ReactNode };
