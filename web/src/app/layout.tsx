@@ -3,6 +3,7 @@ import { AboutMe, Navigation } from 'src/components';
 import '../styles/globals.css';
 import { fetchAllSeo } from 'lib/queries';
 import Script from 'next/script';
+import ClientProviders from 'src/components/Providers/ClientProviders';
 
 type RootLayoutProps = { children: React.ReactNode };
 
@@ -53,15 +54,6 @@ export default async function RootLayout({ children }: RootLayoutProps) {
         />
 
         <title>{seoData.title}</title>
-
-        <Script async={true} strategy='beforeInteractive'>
-          {`if (typeof window !== 'undefined' && localStorage.theme === 'dark' || (!('theme' in localStorage) &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-          document.documentElement.classList.add('dark')
-        } else {
-          document.documentElement.classList.remove('dark')
-        }`}
-        </Script>
       </head>
       <body className='bg-grey-lighter dark:bg-grey-normal'>
         <div className='relative h-full md:h-screen flex flex-col md:flex-row items-start'>
@@ -71,8 +63,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
               <AboutMe />
             </section>
             <section className='p-4 lg:p-6 md:overflow-y-scroll'>
-              {/* <ClientProviders>{children}</ClientProviders> */}
-              {children}
+              <ClientProviders>{children}</ClientProviders>
             </section>
           </main>
           <footer className='container mx-auto hidden md:flex flex-col md:justify-end h-auto md:h-full md:w-60 p-4 lg:p-6 border-solid border-l-0 md:border-l border-grey-light dark:border-grey-lighter'>

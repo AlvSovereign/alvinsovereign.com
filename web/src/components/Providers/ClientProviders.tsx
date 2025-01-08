@@ -1,22 +1,22 @@
 'use client';
 
-import React from 'react';
-import { QueryClient, QueryClientProvider } from 'react-query';
+import React, { useEffect } from 'react';
 
 type ClientProvidersProps = { children: React.ReactNode };
 
 export default function ClientProviders({ children }: ClientProvidersProps) {
-  const queryClientRef = React.useRef<any>();
+  useEffect(() => {
+    console.log('ClientProviders');
+    if (
+      (typeof window !== 'undefined' && localStorage.theme === 'dark') ||
+      (!('theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, []);
 
-  if (!queryClientRef.current) {
-    queryClientRef.current = new QueryClient({
-      defaultOptions: { queries: { refetchOnWindowFocus: false } },
-    });
-  }
-
-  return (
-    <QueryClientProvider client={queryClientRef.current}>
-      {children}
-    </QueryClientProvider>
-  );
+  return <>{children}</>;
 }

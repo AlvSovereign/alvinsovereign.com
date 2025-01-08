@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "yarn get-pages && next dev",
+    "dev": "yarn get-pages && next dev --turbopack",
     "build": "yarn get-pages && next build",
     "start": "next start",
     "get-pages": "node ./scripts/all-pages.js"
@@ -14,20 +14,23 @@
     "dotenv": "^8.2.0",
     "graphql": "^15.5.0",
     "graphql-request": "^3.4.0",
-    "next": "next-14",
-    "react": "18",
-    "react-dom": "18",
+    "next": "15.1.4",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "react-query": "^3.9.8",
     "react-use": "^17.1.1"
   },
   "devDependencies": {
     "@sanity/block-content-to-react": "^2.0.7",
     "@types/node": "^14.14.31",
-    "@types/react": "^17.0.2",
+    "@types/react": "19.0.3",
     "autoprefixer": "^10.4.20",
-    "eslint-config-next": "next-14",
+    "eslint-config-next": "15.1.4",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
     "typescript": "v4.5.2"
+  },
+  "resolutions": {
+    "@types/react": "19.0.3"
   }
 }
