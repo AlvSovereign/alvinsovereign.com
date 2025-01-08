@@ -52,9 +52,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
           crossOrigin='anonymous'
         />
 
-        <title>
-          Alvin Sovereign | Maker, Breaker and Tester of all things UI
-        </title>
+        <title>{seoData.title}</title>
 
         <Script async={true} strategy='beforeInteractive'>
           {`if (typeof window !== 'undefined' && localStorage.theme === 'dark' || (!('theme' in localStorage) &&

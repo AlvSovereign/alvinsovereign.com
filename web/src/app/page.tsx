@@ -8,4 +8,4 @@ export default async function Index() {
   return <WorkExperience experience={experience} />;
 }
 
-export const revalidate = 60 * 60 * 24;
+// export const revalidate = 60 * 60 * 24;

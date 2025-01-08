@@ -18,7 +18,7 @@ const query = gql`
 `;
 
 export const fetcher = () =>
-  request(process.env.NEXT_PUBLIC_SANITY_URL, query).then((data) => {
+  request(process.env.NEXT_PUBLIC_SANITY_URL!, query).then((data) => {
     return data.allSeo[0];
   });
 
