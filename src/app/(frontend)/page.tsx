@@ -1,18 +1,9 @@
-import { headers as getHeaders } from 'next/headers.js'
-import { getPayload } from 'payload'
 import React from 'react'
-
-import config from '@/payload.config'
 import './globals.css'
-import { DisplayH1, DisplayH2, H1, H2, H3, Lead, P, Span } from '@/components/typography'
+import { DisplayH1, DisplayH2, H2, H3, Lead, P, Span } from '@/components/typography'
 import Link from 'next/link'
-import { ArrowUpRight, MoveUpRight } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 export default async function HomePage() {
-  const headers = await getHeaders()
-  const payloadConfig = await config
-  const payload = await getPayload({ config: payloadConfig })
-  const { user } = await payload.auth({ headers })
-
   return (
     <>
       <div className="md:px-inherit container mx-auto px-4">
