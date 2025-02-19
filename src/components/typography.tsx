@@ -1,4 +1,4 @@
-import clsx from 'clsx'
+import { cn } from '@/lib/utils'
 
 type Tags = 'h1' | 'h2' | 'h3' | 'p'
 
@@ -11,7 +11,7 @@ export const DisplayH1 = ({
 }) => {
   return (
     <h1
-      className={clsx(
+      className={cn(
         'text-foreground scroll-m-20 text-6xl font-semibold tracking-tight md:text-7xl lg:text-[160px]',
         className,
       )}
@@ -40,7 +40,7 @@ export const DisplayH2 = ({
 }) => {
   return (
     <h2
-      className={clsx(
+      className={cn(
         'text-foreground scroll-m-20 text-3xl font-semibold tracking-tight md:text-5xl',
         className,
       )}
@@ -63,7 +63,7 @@ export const H2 = ({
 
   return (
     <Tag
-      className={clsx(
+      className={cn(
         'text-foreground scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0',
         className,
       )}
@@ -82,7 +82,7 @@ export const DisplayH3 = ({
 }) => {
   return (
     <h3
-      className={clsx(
+      className={cn(
         'text-foreground scroll-m-20 text-2xl font-semibold tracking-tight md:text-5xl',
         className,
       )}
@@ -105,10 +105,7 @@ export const H3 = ({
 
   return (
     <Tag
-      className={clsx(
-        'text-foreground scroll-m-20 text-2xl font-semibold tracking-tight',
-        className,
-      )}
+      className={cn('text-foreground scroll-m-20 text-2xl font-semibold tracking-tight', className)}
     >
       {children}
     </Tag>
@@ -122,18 +119,27 @@ export const Lead = ({
   children: React.ReactNode
   className?: string
 }) => {
-  return <p className={clsx('text-foreground text-xl tracking-wide', className)}>{children}</p>
+  return <p className={cn('text-foreground text-xl tracking-wide', className)}>{children}</p>
 }
 
 export const P = ({ children, className }: { children: React.ReactNode; className?: string }) => {
   return (
     <p
-      className={clsx(
-        'text-foreground leading-7 tracking-wide [&:not(:last-child)]:mb-6',
-        className,
-      )}
+      className={cn('text-foreground leading-7 tracking-wide [&:not(:last-child)]:mb-6', className)}
     >
       {children}
     </p>
+  )
+}
+
+export const Span = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode
+  className?: string
+}) => {
+  return (
+    <span className={cn('text-foreground leading-7 tracking-wide', className)}>{children}</span>
   )
 }
