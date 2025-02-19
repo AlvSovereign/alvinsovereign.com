@@ -31,7 +31,7 @@ export default async function HomePage() {
               A business-oriented TypeScript FullStack developer with over 9 years of experience
               working in multiple industries, solving complex problems with code.
             </Lead>
-            <Lead className="!text-accent">AVAILABLE FOR NEW PROJECTS</Lead>
+            <Lead className="text-accent">AVAILABLE FOR NEW PROJECTS</Lead>
           </div>
         </section>
         <section className="container mx-auto py-16 md:py-24">

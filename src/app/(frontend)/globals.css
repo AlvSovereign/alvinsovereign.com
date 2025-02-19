@@ -41,9 +41,9 @@
 }
 
 .dark {
-  --accent: oklch(72.2% 0.188 49.11/70%);
-  /* --background: oklch(18.67% 0 0); */
-  --background: oklch(25.31% 0.0103 312.06);
+  --accent: oklch(72.2% 0.188 49.11/80%);
+  --background: oklch(18.67% 0 0);
+  /* --background: oklch(25.31% 0.0103 312.06); */
   --foreground: oklch(100% 0 0 / 80%);
   --card: hsl(0 0% 3.9%);
   --card-foreground: hsl(0 0% 98%);
