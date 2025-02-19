@@ -474,7 +474,7 @@ export default async function HomePage() {
               </article>
               <article className="flex flex-col">
                 <Span className="text-muted-foreground mb-2 text-start md:mb-4">
-                  April 2016 - October 2017
+                  April 2015 - October 2016
                 </Span>
                 <div className="flex flex-col gap-8 md:flex-row">
                   <div className="flex flex-col gap-16 md:flex-row">
