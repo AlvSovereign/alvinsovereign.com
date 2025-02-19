@@ -19,7 +19,7 @@ export default async function HomePage() {
           </div>
           <div className="flex flex-col gap-y-4 pb-8 lg:w-1/2 lg:pb-16">
             <Lead className="text-muted-foreground leading-relaxed">
-              A business-oriented TypeScript FullStack developer with over 9 years of experience
+              A business-oriented FullStack TypeScript developer with over 9 years of experience
               working in multiple industries, solving complex problems with code.
             </Lead>
             <Lead className="text-accent">AVAILABLE FOR NEW PROJECTS</Lead>
@@ -66,9 +66,9 @@ export default async function HomePage() {
               </div>
               <div className="flex flex-5/12 flex-col">
                 <P className="text-muted-foreground">
-                  I&apos;m a veteran TypeScript developer transforming complex business challenges
-                  into elegant digital solutions. From scaling enterprise e-commerce at Calvin Klein
-                  to building innovative EdTech platforms, I specialize in high-performance React
+                  I&apos;m a FullStack TypeScript developer transforming complex business challenges
+                  into elegant digital solutions. From scaling enterprise e-commerce to building
+                  innovative EdTech content platforms, I specialize in high-performance React
                   applications that drive real business results.
                 </P>
                 <P className="text-muted-foreground">
