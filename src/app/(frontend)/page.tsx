@@ -119,7 +119,7 @@ export default async function HomePage() {
             <div className="flex flex-col gap-y-24 md:gap-y-48">
               <article className="flex flex-col">
                 <Span className="text-muted-foreground mb-2 text-start md:mb-4">
-                  Feb 2021 - Jan 2024
+                  Feb 2021 - Jan 2025
                 </Span>
                 <div className="flex flex-col gap-8 md:flex-row">
                   <div className="flex flex-col gap-16 md:flex-row">
