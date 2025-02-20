@@ -1,6 +1,6 @@
 import React from 'react'
 import './globals.css'
-import { DisplayH1, DisplayH2, H2, H3, Lead, P, Span } from '@/components/typography'
+import { DisplayH2, H1, H2, H3, Lead, P, Span } from '@/components/typography'
 import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 export default async function HomePage() {
@@ -9,11 +9,10 @@ export default async function HomePage() {
       <div className="md:px-inherit container mx-auto px-4">
         <section className="md:px-inherit container flex h-screen flex-col px-4">
           <div className="flex flex-1 flex-col justify-center">
-            <DisplayH1 className="mb-2 w-full text-center md:text-end">ALVIN SOVEREIGN</DisplayH1>
-            <H2
-              as="h2"
-              className="text-muted-foreground w-full text-center text-xl md:text-end md:text-3xl lg:text-4xl"
-            >
+            <H1 className="mb-2 w-full text-center text-6xl font-medium tracking-tighter md:text-end md:text-7xl lg:text-[140px]">
+              ALVIN SOVEREIGN
+            </H1>
+            <H2 className="text-muted-foreground w-full text-center text-xl md:text-end md:text-3xl lg:text-4xl">
               Senior FullStack TypeScript Developer
             </H2>
           </div>
@@ -27,11 +26,11 @@ export default async function HomePage() {
         </section>
         <section className="container mx-auto py-16 md:py-24">
           <div className="flex flex-1 flex-col justify-center py-12">
-            <DisplayH2 className="tracking-wide">ABOUT</DisplayH2>
+            <DisplayH2>ABOUT</DisplayH2>
             <hr className="border-accent my-8" />
             <div className="flex flex-col gap-8 md:flex-row">
               <div className="flex flex-7/12 flex-col gap-y-4">
-                <Lead className="text-semibold flex-1 md:text-3xl">
+                <Lead className="flex-1 md:text-3xl">
                   Throughout my career, I have crafted high-performance web applications with an
                   unwavering focus on exceptional user experience and accessibility, turning complex
                   challenges into impactful digital solutions.
@@ -114,7 +113,7 @@ export default async function HomePage() {
         </section>
         <section className="container mx-auto py-16 md:py-24">
           <div className="flex flex-1 flex-col justify-center py-12">
-            <DisplayH2 className="tracking-wide">EXPERIENCE</DisplayH2>
+            <DisplayH2>EXPERIENCE</DisplayH2>
             <hr className="border-accent my-8" />
             <div className="flex flex-col gap-y-24 md:gap-y-48">
               <article className="flex flex-col">
