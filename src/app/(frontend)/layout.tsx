@@ -1,12 +1,7 @@
 import React from 'react'
 import './globals.css'
-import { Manrope, Inter } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import clsx from 'clsx'
-
-const manrope = Manrope({
-  subsets: ['latin'],
-  display: 'swap',
-})
 
 const inter = Inter({
   subsets: ['latin'],

@@ -3,6 +3,7 @@ import './globals.css'
 import { DisplayH2, H1, H2, H3, Lead, P, Span } from '@/components/typography'
 import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
+
 export default async function HomePage() {
   return (
     <>
